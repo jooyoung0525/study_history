@@ -21,7 +21,10 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
     int Count = 1;  
     for(int i = 1; i<repro.size(); i++)
     {
-        if(standard >= repro[i])Count++;
+        if(standard >= repro[i]){
+            Count++;
+             if( i == repro.size()-1) answer.push_back(Count);
+        }
         else
         {
             answer.push_back(Count);
